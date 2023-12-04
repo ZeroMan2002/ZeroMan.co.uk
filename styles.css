@@ -1,8 +1,8 @@
 /* Basic CSS structure */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Example background color */
-    color: #333; /* Default text color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
     margin: 0;
     padding: 0;
 }
@@ -10,34 +10,40 @@ body {
 .app-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Distribute children evenly */
-    padding: 20px; /* Padding around the container */
+    justify-content: space-around;
+    padding: 20px;
 }
 
 .app {
-    background-color: #fff; /* Card background color */
-    border: 1px solid #ddd; /* Border for cards */
-    border-radius: 8px; /* Rounded corners */
-    padding: 15px; /* Padding inside each card */
-    margin: 10px; /* Margin around each card */
-    width: 200px; /* Width of each card */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .app:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
-    transform: translateY(-3px); /* Slightly lift the card on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.app-info {
+    font-size: 0.9em;
+    color: #666;
 }
 
 /* Responsive design */
 @media (max-width: 600px) {
     .app-container {
         flex-direction: column;
-        align-items: center; /* Center the cards in a column */
+        align-items: center;
     }
 
     .app {
-        width: 90%; /* Make card width responsive */
-        margin-bottom: 20px; /* Add more space between cards */
+        width: 90%;
+        margin-bottom: 20px;
     }
 }
