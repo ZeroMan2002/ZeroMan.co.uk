@@ -1,49 +1,60 @@
-/* General Body Styling */
-body {
-  font-family: 'Arial', sans-serif;
+/* Basic Reset */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Navbar Styling */
-.navbar {
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header and Navigation Styles */
+header {
   background-color: #333;
-}
-
-.navbar-brand, .nav-link {
-  color: #fff !important;
-}
-
-.nav-link:hover {
-  color: #ddd !important;
-}
-
-/* Hero Section Styling */
-.hero {
-  background: url('your_hero_image_path.jpg') no-repeat center center;
-  background-size: cover;
   color: white;
-  padding: 100px 0;
+  padding: 10px 0;
 }
 
-/* Section Styling */
-section {
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
   text-align: center;
-  padding: 50px 0;
 }
 
-/* Footer Styling */
+/* Footer Styles */
 footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .hero {
-      padding: 50px 0;
+@media (max-width: 600px) {
+  nav ul {
+      flex-direction: column;
+  }
+
+  nav ul li {
+      margin: 10px 0;
   }
 }
