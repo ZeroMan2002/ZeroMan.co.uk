@@ -1,45 +1,76 @@
-/* ... existing styles ... */
-
-/* Hamburger Menu for Small Screens */
-.hamburger {
-  display: none;
-  cursor: pointer;
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 5px;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
 }
 
-/* Toggle visibility on small screens */
-@media (max-width: 768px) {
-  .hamburger {
-      display: block;
+/* Header Styles */
+.header {
+  background-color: #77bfa3;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Navigation Bar Styles */
+.nav-bar {
+  background-color: #333;
+  text-align: center; /* Center align the navigation links */
+  padding: 0 10px; /* Add some padding on the left and right */
+}
+
+.nav-bar a {
+  display: inline-block; /* Inline-block display for horizontal layout */
+  color: white;
+  padding: 14px 16px; /* Adjust padding as necessary */
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Main Content Styles */
+.main-content {
+  width: 70%;
+  padding: 20px;
+  background-color: #fff;
+  min-height: 400px; /* Adjust as needed */
+  float: left; /* Keep the float for the main content */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 30%;
+  padding: 20px;
+  background-color: #f2f2f2;
+  float: right; /* Keep the float for the sidebar */
+}
+
+/* Clearfix for floating elements */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsive adjustments for the navigation bar */
+@media screen and (max-width: 768px) {
+  .nav-bar a {
+      padding: 14px 10px; /* Reduce padding on smaller screens to fit all links in one line */
+      font-size: 0.9em; /* Optionally reduce font size to ensure fitting */
   }
 
-  nav ul {
-      position: absolute;
-      right: 0;
-      top: 60px;
-      background-color: #007bff;
-      flex-direction: column;
-      width: 100%;
-      display: none;
-  }
-
-  nav ul li {
-      text-align: center;
-      padding: 10px;
-  }
-
-  nav ul li a {
-      display: block;
-      width: 100%;
-  }
-
-  nav ul.show {
-      display: flex;
+  .main-content, .sidebar {
+      width: 100%; /* Full width for small screens */
+      float: none; /* Remove float for small screens */
   }
 }
