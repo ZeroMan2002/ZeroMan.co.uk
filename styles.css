@@ -1,50 +1,26 @@
+/* Basic CSS structure */
+body {
+    font-family: Arial, sans-serif;
+    /* Other styling */
+}
+
 .app-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    /* Other styling */
 }
 
 .app {
-    width: 150px; /* Adjust size as necessary */
-    text-align: center;
-    position: relative;
+    /* Card styling */
 }
 
-.app a {
-    text-decoration: none;
-    color: #fff; /* Choose a color that fits the theme */
+.app:hover {
+    /* Hover effect */
 }
 
-.app img {
-    width: 100%;
-    border-radius: 50%; /* Circular images */
-    transition: transform 0.3s ease;
-}
-
-.app-info {
-    visibility: hidden;
-    width: 150px;
-    background-color: #333; /* Choose a color that fits the theme */
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 10px;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: visibility 0.3s, opacity 0.3s ease;
-    opacity: 0;
-}
-
-.app:hover .app-info {
-    visibility: visible;
-    opacity: 1;
-}
-
-.app:hover img {
-    transform: scale(1.1); /* Slightly enlarge the image */
+/* Responsive design */
+@media (max-width: 600px) {
+    .app-container {
+        flex-direction: column;
+    }
 }
