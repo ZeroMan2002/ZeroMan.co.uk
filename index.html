@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatGPT Products</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li class="home-link"><a href="index.html">Home</a></li>
+                <li><a href="products.html" target="_parent">Products</a></li>
+                <li><a href="_about.html" target="_self">About</a></li>
+                <li><a href="_contact.html" target="_blank">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -27,5 +34,23 @@
     <footer>
         <p>&copy; 2023 ChatGPT Products</p>
     </footer>
+
+    <!-- JavaScript to handle navigation dynamics -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            if (window.location.href.includes('index.html')) {
+                document.querySelector('.home-link').style.display = 'none';
+            }
+        });
+    </script>
+
+
+<script>
+  function toggleMenu() {
+      const navUL = document.querySelector('nav ul');
+      navUL.classList.toggle('show');
+  }
+</script>
+
 </body>
 </html>
