@@ -1,0 +1,27 @@
+.chatgpt-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.chatgpt-session {
+    margin: 10px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.chatgpt-session a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.chatgpt-session:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
