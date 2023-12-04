@@ -1,45 +1,52 @@
+
+
+<?php
+$servername = "sql101.infinityfree.com";
+$username = "if0_35552087";
+$password = "#Ry-Ze-An-Ro20#";
+$dbname = " if0_35552087_Contact_Form";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+?>
+
+
+
+
+
+
+
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = strip_tags(trim($_POST["name"]));
-    // Repeat the above line for other form fields
+    // Collect post data
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
 
-    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-
-    // Check the data...
-    if (empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($message)) {
-        // Set a 400 (bad request) response code and exit.
-        http_response_code(400);
-        echo "Oops! There was a problem with your submission. Please complete the form and try again.";
-        exit;
-    }
-
-    // Recipient email address
-    $recipient = "your@email.com";
-    
-    // Set the email subject.
-    $subject = "New contact from $name";
-
-    // Build the email content.
-    $email_content = "Name: $name\n";
-    $email_content .= "Email: $email\n\n";
-    $email_content .= "Message:\n$message\n";
-
-    // Build the email headers.
-    $email_headers = "From: $name <$email>";
-
-    // Send the email.
-    if (mail($recipient, $subject, $email_content, $email_headers)) {
-        // Set a 200 (okay) response code.
-        http_response_code(200);
-        echo "Thank You! Your message has been sent.";
+    if (empty($name) || empty($email) || empty($message)) {
+        // Handle the error scenario; you might want to redirect to an error page
+        echo "All fields are required."; // Alternatively, redirect to an error page
     } else {
-        // Set a 500 (internal server error) response code.
-        http_response_code(500);
-        echo "Oops! Something went wrong and we couldn’t send your message.";
+        $to = 'your_email@example.com'; // Replace with your email address
+        $subject = 'New Contact Form Submission';
+        $email_content = "Name: $name\nEmail: $email\nMessage: $message\n";
+
+        if (mail($to, $subject, $email_content)) {
+            // Redirect to a thank-you page
+            header('Location: thank-you.html');
+            exit;
+        } else {
+            // Handle the error scenario; you might want to redirect to an error page
+            echo "There was a problem sending your message."; // Alternatively, redirect to an error page
+        }
     }
 } else {
-    // Not a POST request, set a 403 (forbidden) response code.
-    http_response_code(403);
-    echo "There was a problem with your submission, please try again.";
+    echo "This page is for form submissions only.";
 }
 ?>
