@@ -1,27 +1,50 @@
-.chatgpt-container {
-    width: 80%;
-    margin: auto;
+.app-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.chatgpt-session {
-    margin: 10px;
-    padding: 15px;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.app {
+    width: 150px; /* Adjust size as necessary */
     text-align: center;
+    position: relative;
 }
 
-.chatgpt-session a {
+.app a {
     text-decoration: none;
-    color: #333;
-    font-size: 16px;
+    color: #fff; /* Choose a color that fits the theme */
 }
 
-.chatgpt-session:hover {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+.app img {
+    width: 100%;
+    border-radius: 50%; /* Circular images */
+    transition: transform 0.3s ease;
+}
+
+.app-info {
+    visibility: hidden;
+    width: 150px;
+    background-color: #333; /* Choose a color that fits the theme */
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: visibility 0.3s, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.app:hover .app-info {
+    visibility: visible;
+    opacity: 1;
+}
+
+.app:hover img {
+    transform: scale(1.1); /* Slightly enlarge the image */
 }
