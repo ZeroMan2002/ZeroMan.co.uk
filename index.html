@@ -3,6 +3,9 @@
 <head>
     <title>Zeroman.co.uk</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+    <script src="control/intilization.js" defer type="module"></script>
 </head>
 <body>
 
@@ -16,14 +19,15 @@
         <a href="products.html">Products</a>
         <!-- Dropdown Menu for Account -->
         <div class="dropdown">
-            <button class="dropbtn">Account</button>
-            <div class="dropdown-content">
-                <a href="login.html">Login</a>
-                <a href="register.html">Register</a>
+            <button class="dropbtn" onclick="toggleDropdown()">Account</button>
+            <div class="dropdown-content" id="myDropdown">
                 <a href="profile.html">Profile</a>
-                <!-- More links can be added here -->
+                <a href="settings.html">Settings</a>
+                <a href="logout.html">Logout</a>
+                <!-- Add more links as needed -->
             </div>
         </div>
+        
         <a href="help.html">Help</a>
         <a href="contact.html">Contact</a>
     </nav>
@@ -35,9 +39,5 @@
     <aside class="sidebar">
         <!-- Sidebar content here -->
     </aside>
-
-    <script>
-        // If you need any JavaScript to handle dropdown actions, it can be added here
-    </script>
 </body>
 </html>

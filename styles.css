@@ -1,115 +1,82 @@
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Use a modern sans-serif font */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #e2e2e2;
+  font-family: 'Arial', sans-serif;
   color: #333;
+  line-height: 1.6;
 }
 
-/* Header Styles */
-.header {
-  background-color: #77bfa3;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-}
-
-/* Navigation Bar Styles */
+/* Style the navigation bar */
 .nav-bar {
-  background-color: #333;
-  text-align: center; /* Center align the navigation links */
-  padding: 0 10px; /* Add some padding on the left and right */
+  background: #004d99;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .nav-bar a {
-  display: inline-block; /* Inline-block display for horizontal layout */
-  color: white;
-  padding: 14px 16px; /* Adjust padding as necessary */
+  color: #fff;
   text-decoration: none;
+  padding: 10px 20px;
 }
 
 .nav-bar a:hover {
-  background-color: #ddd;
+  background: #003366;
+}
+
+/* Style the dropdown button */
+.dropbtn {
+  background-color: #004d99;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
   color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-/* Main Content Styles */
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Show the dropdown menu on click */
+.dropdown:focus-within .dropdown-content {display: block;}
+
+/* Add padding and a max-width to main content */
 .main-content {
-  width: 70%;
-  padding: 20px;
-  background-color: #fff;
-  min-height: 400px; /* Adjust as needed */
-  float: left; /* Keep the float for the main content */
-}
-
-/* Sidebar Styles */
-.sidebar {
-  width: 30%;
-  padding: 20px;
-  background-color: #f2f2f2;
-  float: right; /* Keep the float for the sidebar */
-}
-
-/* Clearfix for floating elements */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Responsive adjustments for the navigation bar */
-@media screen and (max-width: 768px) {
-  .nav-bar a {
-    padding: 14px 10px; /* Reduce padding on smaller screens to fit all links in one line */
-    font-size: 0.9em; /* Optionally reduce font size to ensure fitting */
-  }
-
-  .main-content, .sidebar {
-    width: 100%; /* Full width for small screens */
-    float: none; /* Remove float for small screens */
-  }
-}
-
-/* Styles for the registration and login forms */
-.form-container {
-  display: none; /* Hide by default */
-  width: 70%;
+  max-width: 1100px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #232323;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  z-index: 1000;
 }
 
-.form-container h2 {
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.form-container input[type="email"],
-.form-container input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-.form-container button {
-  padding: 10px 20px;
-  background-color: #77bfa3; /* Match the theme color */
-  color: white; /* Text color */
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.form-container button:hover {
-  background-color: #5f9c85; /* Hover color */
+/* Style the sidebar with a light background */
+.sidebar {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-top: 20px;
 }
