@@ -65,12 +65,51 @@ body {
 /* Responsive adjustments for the navigation bar */
 @media screen and (max-width: 768px) {
   .nav-bar a {
-      padding: 14px 10px; /* Reduce padding on smaller screens to fit all links in one line */
-      font-size: 0.9em; /* Optionally reduce font size to ensure fitting */
+    padding: 14px 10px; /* Reduce padding on smaller screens to fit all links in one line */
+    font-size: 0.9em; /* Optionally reduce font size to ensure fitting */
   }
 
   .main-content, .sidebar {
-      width: 100%; /* Full width for small screens */
-      float: none; /* Remove float for small screens */
+    width: 100%; /* Full width for small screens */
+    float: none; /* Remove float for small screens */
   }
+}
+
+/* Styles for the registration and login forms */
+.form-container {
+  display: none; /* Hide by default */
+  width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #232323;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.form-container h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.form-container input[type="email"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-container button {
+  padding: 10px 20px;
+  background-color: #77bfa3; /* Match the theme color */
+  color: white; /* Text color */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #5f9c85; /* Hover color */
 }

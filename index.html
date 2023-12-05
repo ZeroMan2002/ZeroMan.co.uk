@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Zeroman.co.uk.</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>Zeroman.co.uk</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script type="module" src="script.js"></script>
 </head>
 <body>
 
-    <div class="header">
+    <header class="header">
         <h1>Welcome to ZeroMan.Co.Uk</h1>
-    </div>
+    </header>
 
-    <div class="nav-bar">
-        <a href="updates">Latest Updates</a>
-        <a href="discussions.html" target="_self">Community Discussions</a>
-        <a href="products.html" target="_self">Products</a>
-        <a href="account.html" target="_self">Account</a>
-        <a href="help.html" target="_self">Help</a>
-        <a href="contact.html" target="_self">Contact</a>
-    </div>
+    <nav class="nav-bar">
+        <a href="updates.html">Latest Updates</a>
+        <a href="discussions.html">Community Discussions</a>
+        <a href="products.html">Products</a>
+        <a href="#" id="account-link">Account</a>
+        <a href="help.html">Help</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-    <div class="main-content">
+    <main class="main-content">
         <!-- Blog posts and other content here -->
-    </div>
+    </main>
 
-    <div class="sidebar">
+    <aside class="sidebar">
         <!-- Sidebar content here -->
+    </aside>
+
+    <!-- Login/Signup Form -->
+    <div class="form-container" id="form-container">
+        <h2>Login/Signup</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <button onclick="signup()">Sign Up</button>
     </div>
 
 </body>
