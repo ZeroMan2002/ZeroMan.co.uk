@@ -5,6 +5,9 @@
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js" ></script>
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
     <script src="control/intilization.js" defer type="module"></script> <!-- Include your external JS file here -->
+
+    <link rel="stylesheet" type="text/css" href="stylesaccount.css">
+
     <style>
         body { font-family: Arial, sans-serif; }
         .container { width: 300px; margin: 100px auto; }
@@ -12,9 +15,26 @@
     </style>
 </head>
 <body>
+
+    
+    <header class="header">
+        <h1>Welcome to ZeroMan.Co.Uk</h1>
+    </header>
+
+    <nav class="nav-bar">
+        <a href="updates.html">Latest Updates</a>
+        <a href="discussions.html">Community Discussions</a>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="help.html">Help</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+
+
     <div class="container">
         <h2>Signup/Login</h2>
-        <input type="email" id="email" placeholder="Email">
+        <input type="email" id="email" placeholder="Username or Enamil" id="username">
         <input type="password" id="password" placeholder="Password">
         <button id="signupButton">Sign Up</button>
         <button id="loginButton">Login</button>
