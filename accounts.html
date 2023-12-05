@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup/Login Page</title>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js" ></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+    <script src="intilization.js" defer type="module"></script> <!-- Include your external JS file here -->
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 300px; margin: 100px auto; }
+        input, button { width: 100%; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Signup/Login</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button id="signupButton">Sign Up</button>
+        <button id="loginButton">Login</button>
+        <p id="message"></p>
+    </div>
+</body>
+</html>
