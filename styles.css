@@ -1,82 +1,70 @@
-/* Use a modern sans-serif font */
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  line-height: 1.6;
+    font-family: Arial, sans-serif;
 }
 
-/* Style the navigation bar */
-.nav-bar {
-  background: #004d99;
-  color: #fff;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+/* Navigation Bar Styles */
+#navbar {
+    background-color: #007bff; /* Example primary color */
+    padding: 10px 20px; /* Adjusted padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
 }
 
-.nav-bar a {
-  color: #fff;
-  text-decoration: none;
-  padding: 10px 20px;
+#navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the menu items horizontally */
 }
 
-.nav-bar a:hover {
-  background: #003366;
+#navbar ul li {
+    margin: 0 20px;
 }
 
-/* Style the dropdown button */
-.dropbtn {
-  background-color: #004d99;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+#navbar ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px; /* Gives the bubbly effect */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
+#navbar ul li a:hover {
+    background-color: #0056b3; /* A slightly darker shade for the hover effect */
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+/* Main Content Styles */
+main {
+    padding: 20px;
 }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+    #navbar ul li {
+        margin: 5px 0; /* Reduce margin for mobile */
+    }
 
-/* Show the dropdown menu on click */
-.dropdown:focus-within .dropdown-content {display: block;}
-
-/* Add padding and a max-width to main content */
-.main-content {
-  max-width: 1100px;
-  margin: 20px auto;
-  padding: 20px;
-}
-
-/* Style the sidebar with a light background */
-.sidebar {
-  background-color: #f4f4f4;
-  padding: 20px;
-  margin-top: 20px;
+    #navbar ul li a {
+        padding: 10px 15px; /* Adjust padding for mobile */
+    }
 }

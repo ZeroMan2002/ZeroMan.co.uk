@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Zeroman.co.uk</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
-    <script src="control/intilization.js" defer type="module"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header class="header">
-        <h1>Welcome to ZeroMan.Co.Uk</h1>
-    </header>
-
-    <nav class="nav-bar">
-        <a href="updates.html">Latest Updates</a>
-        <a href="discussions.html">Community Discussions</a>
-        <a href="products.html">Products</a>
-        <!-- Dropdown Menu for Account -->
-        <div class="dropdown">
-            <button class="dropbtn" onclick="toggleDropdown()">Account</button>
-            <div class="dropdown-content" id="myDropdown">
-                <a href="profile.html">Profile</a>
-                <a href="settings.html">Settings</a>
-                <a href="logout.html">Logout</a>
-                <!-- Add more links as needed -->
-            </div>
-        </div>
-        
-        <a href="help.html">Help</a>
-        <a href="contact.html">Contact</a>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <!-- Additional links can be added here -->
+        </ul>
     </nav>
 
-    <main class="main-content">
-        <!-- Blog posts and other content here -->
+    <main>
+        <section id="home">
+            <!-- Home Section Content -->
+        </section>
+        <section id="services">
+            <!-- Services Section Content -->
+        </section>
+        <section id="about">
+            <!-- About Section Content -->
+        </section>
+        <!-- Additional sections can be added here -->
     </main>
 
-    <aside class="sidebar">
-        <!-- Sidebar content here -->
-    </aside>
+    <footer>
+        <p>&copy; 2023 Your Website Name</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js"></script>
+
+    <!-- Firebase Initialization -->
+    <script src="/control/initialization.js"></script>
+
+    <!-- Page Specific Scripts -->
+    <script src="scripts.js"></script>
 </body>
 </html>
