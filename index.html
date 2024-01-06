@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroMan.Co.Uk</title>
+    <style>
+        /* Add your modern color palette styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0; /* Remove default margin to ensure full-width display */
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff9900;
+        }
+
+        /* Add your fancy animations and transitions code here */
+        section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            text-align: center; /* Center align the sections */
+        }
+
+        section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Add unique and natural animations for each section */
+        #home {
+            transition-delay: 0s;
+        }
+
+        #about {
+            transition-delay: 0.2s;
+        }
+
+        #socials {
+            transition-delay: 0.4s;
+        }
+
+        /* Add your custom styles for the services section */
+        #socials {
+            transition-delay: 0.6s;
+        }
+
+        /* Add styling for all buttons in the navigation bar */
+        nav ul li a {
+            background-color: #333;
+            border-radius: 5px;
+            margin: 0 5px;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff9900;
+        }
+
+        /* Add fancy animations for the headings */
+        h2 {
+            animation: fade-in 1s ease-in-out;
+            font-style: italic; /* Make the headings natural */
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Add fancy animations for the paragraphs */
+        p {
+            animation: slide-up 1s ease-in-out;
+            text-align: center; /* Center align the paragraphs */
+        }
+
+        @keyframes slide-up {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Add fancy animations for the navigation links */
+        nav ul li a {
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav ul li a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ff9900;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        nav ul li a:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* Add a fancy background pattern */
+        body {
+            background-image: url("https://example.com/pattern.png");
+            background-repeat: repeat;
+        }
+
+        /* Add your revolutionary styles here */
+        #home {
+            background-color: #ff9900;
+            color: #fff;
+        }
+
+        #about {
+            background-color: #333;
+            color: #fff;
+        }
+
+        #socials {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        /* Add revolutionary animations */
+        #home h2 {
+            animation: rotate-in 1s ease-in-out;
+        }
+
+        @keyframes rotate-in {
+            0% {
+                transform: rotate(-180deg);
+            }
+            100% {
+                transform: rotate(0);
+            }
+        }
+
+        /* Add revolutionary transitions */
+        #about p {
+            transition: color 0.5s ease;
+        }
+
+        #about p:hover {
+            color: #ff9900;
+        }
+
+        /* Add revolutionary styles for navigation links */
+        nav ul li a {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Add revolutionary styles for active navigation link */
+        nav ul li a.active {
+            color: #ff9900;
+        }
+
+        /* Add navigation arrows for GPT buttons */
+        .gpt-navigation {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Center the arrow buttons with space between them */
+            margin-bottom: 10px;
+            position: relative; /* Add relative positioning for z-index */
+        }
+
+        .gpt-navigation button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            z-index: 2; /* Set higher z-index for arrow buttons */
+        }
+
+        .gpt-navigation button:hover {
+            background-color: #ff9900;
+        }
+
+        .gpt-search {
+            margin-bottom: 10px;
+        }
+
+        .gpt-search input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .gpt-buttons {
+            display: flex;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            justify-content: center; /* Center the GPT buttons */
+            padding: 10px; /* Optional: Add padding for better aesthetics */
+            transition: transform 0.3s ease; /* Add transition for the translation effect */
+        }
+
+        .gpt-button {
+            flex: 0 0 auto;
+            margin: 0 5px; /* Optional: Add margin between buttons */
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent; /* Initial border setting */
+            transition: border 0.3s ease, opacity 0.3s ease; /* Transition for the border and opacity effect */
+            opacity: 0; /* Initially set opacity to 0 */
+            width: 300px; /* Set a fixed width for each button */
+            text-align: center; /* Align text content to the center */
+        }
+
+        .gpt-button:hover {
+            border: 2px solid #ff9900; /* Border color on hover */
+        }
+
+        /* Add a class for GPT button images to ensure consistent styling */
+        .gpt-button img {
+            max-width: 100%;
+            height: 150px; /* Set a fixed height for all images */
+            object-fit: cover; /* Ensure the image maintains its aspect ratio */
+            border-radius: 5px; /* Adjust border-radius for rounded corners */
+        }
+
+        .gpt-button.active {
+            opacity: 1; /* Set opacity to 1 for the active button */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home" id="home-link">Home</a></li>
+            <li><a href="#about" id="about-link">About Me</a></li>
+            <li><a href="#socials" id="socials-link">Socials</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="active">
+        <h2>Welcome to ZeroMan.Co.Uk</h2>
+        <p>This is the GPT's section where you can access all of my available ChatGPT's.</p>
+
+        <!-- Add navigation arrows for GPT buttons -->
+        <div class="gpt-navigation">
+            <button onclick="prevGPT()">←</button>
+            <div class="gpt-buttons" id="gptButtonsContainer">
+                <!-- Bubbly list-style button array for GPTs -->
+                <div class="gpt-button" id="gptButton0">
+                    <img src="Pictures/PalmReader.png" alt="PalmReader" class="gpt-button-img">
+                    <p>Palm Reader: Allows a user to upload a picture of their palm in order to get a fairly accurate reading of their palm.</p>
+                    <a href="#gpt1">Use GPT</a>
+                </div>
+
+                <div class="gpt-button" id="gptButton1">
+                    <img src="gpt2_image.jpg" alt="GPT 2" class="gpt-button-img">
+                    <p>GPT-2: Short description of its use case.</p>
+                    <a href="#gpt2">Use GPT</a>
+                </div>
+
+                <!-- Add more GPT buttons as needed -->
+
+            </div>
+            <button onclick="nextGPT()">→</button>
+        </div>
+
+        <!-- Add search for GPT buttons -->
+        <div class="gpt-search">
+            <input type="text" placeholder="Search GPT..." oninput="searchGPT(this.value)">
+        </div>
+    </section>
+
+    <!-- ... (your existing HTML) ... -->
+
+    <script>
+        let currentGPTIndex = 0;
+        const gptButtons = document.querySelectorAll(".gpt-buttons .gpt-button");
+        const gptButtonsContainer = document.getElementById("gptButtonsContainer");
+
+        function showGPT(index) {
+            const translateValue = -index * (gptButtons[0].offsetWidth + 10); // Adjust 10 for margin
+            gptButtonsContainer.style.transform = `translateX(${translateValue}px)`;
+            gptButtons.forEach(button => {
+                button.style.opacity = 0;
+                button.classList.remove("active");
+            });
+            gptButtons[index].style.opacity = 1;
+            gptButtons[index].classList.add("active");
+        }
+
+        function nextGPT() {
+            currentGPTIndex = (currentGPTIndex + 1) % gptButtons.length;
+            showGPT(currentGPTIndex);
+        }
+
+        function prevGPT() {
+            currentGPTIndex = (currentGPTIndex - 1 + gptButtons.length) % gptButtons.length;
+            showGPT(currentGPTIndex);
+        }
+
+        function searchGPT(query) {
+            query = query.toLowerCase();
+            gptButtons.forEach((button, index) => {
+                const buttonText = button.textContent.toLowerCase();
+                if (buttonText.includes(query)) {
+                    button.style.display = "block";
+                    if (index === currentGPTIndex) {
+                        showGPT(index); // Update current GPT if it matches the search
+                    }
+                } else {
+                    button.style.display = "none";
+                }
+            });
+        }
+
+        // Event listener for arrow keys
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'ArrowLeft') {
+                prevGPT();
+            } else if (event.key === 'ArrowRight') {
+                nextGPT();
+            }
+        });
+
+        // Initial setup
+        showGPT(currentGPTIndex);
+    </script>
+</body>
+</html>
